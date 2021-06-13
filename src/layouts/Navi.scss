@@ -1,0 +1,87 @@
+$nav:linear-gradient(to right, #004766, #005470, #006179, #006e81, #007b87, #00868d, #009291, #009d93, #00a996, #00b697, #00c295, #05ce91);
+// .App {
+//   list-style-type: none;
+  .navBar {
+    height: auto;
+    background: $nav;
+    font-size: 1.8rem;
+    padding: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+
+    .navBar-brand {
+      display: flex;
+      align-items: center;
+      a {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        .navBar-icon {
+          display: flex;
+          align-items: center;
+
+          padding: 1.1rem;
+        }
+      }
+    }
+    .navBar-items {
+      display: flex;
+      align-items: center;
+      ul {
+        display: flex;
+        align-items: center;
+        a {
+          padding: 1.1rem;
+          text-align: center;
+          color: #fff;
+        }
+        a:hover {
+          background: #fff;
+          color:#008C8C;
+          border-radius: 15px;
+          
+        }
+      }
+    }
+    .navBar-log {
+      display: flex;
+      align-items: center;
+      ul {
+        display: flex;
+
+        a {
+          padding: 1.1rem;
+          text-align: center;
+          color: #fff;
+        }
+        a:hover {
+          background: #fff;
+          border-radius: 15px;
+          color: #05CE91;
+         
+        }
+      }
+    }
+  }
+// }
+
+@media (max-width: 1010px) {
+  
+  .App {
+    .navBar {
+      p {
+        display: none;
+      }
+      .navBar-brand {
+        font-size: 1.2em;
+      }
+      .navBar-items {
+        display: flex;
+        font-size: 1.2em;
+      }
+      .navBar-log {
+        font-size: 1.2em;
+      }
+    }
+  }
+}

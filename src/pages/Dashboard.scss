@@ -1,0 +1,244 @@
+$card: #002B3D;
+.dashboard {
+  color: #383e42;
+  
+  .mainRow {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .sideBar-col {
+      width: 16.66%;
+      margin: 2rem;
+      .sideBar {
+        font-size: 2rem;
+        border: 1px solid #e5e5e5;
+        border-right: 1px solid $card;
+        border-bottom: 3px solid $card;
+        height: 450px;
+        padding: 2rem;
+        // border-radius: 15px;
+        h2 {
+          text-align: center;
+          margin-bottom: 2rem;
+        }
+        ul {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          li {
+            display: flex;
+            div {
+              color: $card;
+              font-size: 2rem;
+              display: flex;
+              align-items: center;
+            }
+            p {
+              white-space: nowrap;
+            }
+          }
+        }
+      }
+    }
+    .cards-col {
+      width: 83.34%;
+      margin: 2rem;
+      hr{
+        border-top: 1px solid $card;
+      }
+      .row {
+        display: flex;
+        justify-content: space-around;
+
+        .card {
+          font-size: 2.2rem;
+          width: 30rem;
+          height: 15rem;
+          border: 1px solid #e5e5e5;
+          border-right: 0.7px solid $card;
+          border-bottom: 3px solid $card;
+          // border-radius: 1.5rem;
+          margin: 1rem;
+          
+          .card-body {
+            position: relative;
+            padding-left: 1.5rem;
+            text-align:center;
+            .icon{
+              margin-top:1.2rem;
+            }
+            h2 {
+              font-size: 2.2rem;
+            }
+            h3 {
+              color: gray;
+              font-size: 1.8rem;
+              font-weight: 300;
+            }
+            p {
+              color: gray;
+              font-size: 1.8rem;
+              font-weight: 300;
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+            }
+            span {
+              font-size: 1.2rem;
+              font-weight: bold;
+              position: absolute;
+              top: 0;
+              right: 0;
+              padding: 0.6rem;
+              color: #fff;
+              background: $card;
+              // border-radius: 1.5rem;
+              border-bottom-left-radius: 1rem;
+              
+            }
+            div{
+              display:flex;
+              justify-content:center;  
+              svg {
+                font-size: 1.5em;
+                padding:.5rem;
+                color: $card;
+              }
+              svg:hover{
+                background:#fff;
+                border-radius: 15px;
+                color:$card;
+                transition:all .5s ease-out;
+              }
+            }
+            
+
+          }
+        }
+        .card:hover {
+          cursor: pointer;
+          background: $card;
+          transition: all 0.5s ease-out;
+          border-top: 0.7px solid $card;
+          .card-body {
+            h2,
+            h3,
+            p {
+              color: #fff;
+            }
+            span {
+              color: $card;
+              background: #fff;
+            }
+            svg {
+              color: #fff;
+            }
+            
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1320px) {
+  .dashboard {
+    .mainRow {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .sideBar-col {
+        width: 33.3%;
+        .sideBar {
+          font-size: 1.5rem;
+          height: auto;
+          width: auto;
+          ul {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 2rem;
+          }
+        }
+      }
+      .cards-col {
+        h1{
+          font-size:1.9rem;
+        }
+        .row {
+          .card {
+            font-size: 1.6rem;
+            .card-body {
+              padding: 1rem;
+              span {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 775px) {
+  .dashboard {
+    .mainRow {
+      .sideBar-col {
+        width:20rem;
+        .sideBar {
+          font-size: 1rem;
+        }
+      }
+      .cards-col {
+        
+        .row {
+          flex-wrap: wrap;
+          justify-content: center;
+          .card {
+            height: 10rem;
+            font-size: 1rem;
+            .card-body {
+              text-align: center;
+              .icon{
+                margin-top:0;
+              }
+              h2 {
+                font-size: 1.6rem;
+              }
+              h3 {
+                font-size: 1.2rem;
+              }
+              p {
+                font-size: 1.2rem;
+              }
+              span {
+                font-size: 0.9rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .dashboard {
+    .mainRow {
+      .sideBar-col {
+        .sideBar {
+          font-size: .8rem;
+          ul{
+            li{
+              
+              div{
+                svg{
+                  font-size: 1.2rem;
+                }
+              }
+            }
+          }
+          
+        }
+      }
+    }
+  }
+}

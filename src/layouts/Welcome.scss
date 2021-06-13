@@ -1,0 +1,43 @@
+.App{
+    .welcome{
+        position: relative;
+        height: 200px;
+        background-image:linear-gradient(
+            to right bottom,
+            rgba(0,71,111,0.4),
+            rgba(0, 140, 140,0.4)),url("../images/bg.jfif");
+        background-size: cover;
+        clip-path:polygon(0 0 , 100% 0, 100% 100%,0 75%);
+        .welcome-text{
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            p{
+                font-size:1.8rem;
+                text-align: center;
+                color:#fff;
+                font-weight: 300;
+                letter-spacing:2px;
+                animation: moveInBottom 1s ease-out;
+            }
+        }
+    }
+}
+
+
+@keyframes moveInBottom {
+    /* We can specify what I want to happen in each moment of time of the animation.
+    So we start with 0% which is before the animation actually starts.
+    So this can also be called start. Then the finish is at 100%, which is when the animation finishes. */
+
+    0% { /* animation start // initial state*/
+        opacity: 0;
+        transform: translateY(3rem); /*So a positive value means it goes to the right, and negative value means it goes to the left.*/
+    }
+
+    100% {  /* animation finish // final state*/
+        opacity:1;
+        transform: translate(0);
+    }
+}
